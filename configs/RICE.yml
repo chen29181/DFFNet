@@ -1,0 +1,23 @@
+data:
+    dataset: "RICE"
+    channels: 3
+    num_workers: 4
+    data_dir: "/home/cz/RICE/RICE1"  #需要指定一下1,2
+
+
+training:
+    batch_size: 4
+    n_epochs: 500
+    n_iters: 3000000
+    snapshot_freq: 10000
+    validation_freq: 5000
+
+sampling:
+    batch_size: 8
+    
+optim:
+    weight_decay: 0.000
+    optimizer: "Adam"
+    lr: 0.0001
+    amsgrad: False
+    eps: 0.00000001
