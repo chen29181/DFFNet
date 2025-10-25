@@ -53,7 +53,7 @@ class MSDEU(nn.Module):
         self.dilated_conv1 = nn.Conv2d(channels, channels, kernel_size=3, padding=1, dilation=1)
         self.dilated_conv3 = nn.Conv2d(channels, channels, kernel_size=3, padding=3, dilation=3)
         self.dilated_conv9 = nn.Conv2d(channels, channels, kernel_size=3, padding=9, dilation=9)
-        self.dilated_conv27 = nn.Conv2d(channels, channels, kernel_size=3, padding=36, dilation=3)
+        self.dilated_conv27 = nn.Conv2d(channels, channels, kernel_size=3, padding=27, dilation=27)
 
         self.conv3_3 = nn.Conv2d(channels * 4, channels * 4, kernel_size=3, padding=1)
         self.conv3_4 = nn.Conv2d(channels * 4, channels * 4, kernel_size=3, padding=1)
