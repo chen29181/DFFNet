@@ -285,7 +285,8 @@ class GlobalBranch(object):
                 gt = x[:, 3:6, :, :]
                 
                 # 模型输出
-                pre, haze_recon,ffb_out = self.model(input)
+                #pre, haze_recon,ffb_out = self.model(input)
+                pre, haze_recon = self.model(input)
                 #pre= self.model(input)
 
                 # 计算损失
