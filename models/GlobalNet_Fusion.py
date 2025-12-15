@@ -697,7 +697,7 @@ class GlobalNet_Fusion(nn.Module):
         combined2 = torch.cat([ffb_out5, spatial_out5], dim=1)
         combined2 = self.fsas2(combined2)
         
-        ffb_out = self.fre_decoder(ffb_out5)
+        #ffb_out = self.fre_decoder(ffb_out5)
 
         x = combined2
         x = self.conv2(x)
