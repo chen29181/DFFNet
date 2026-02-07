@@ -288,12 +288,12 @@ class getLowHigh(nn.Module):
         fft_high = fft * (1 - mask)
         high = self.unshift(fft_high)
         high = torch.fft.ifft2(high, norm='forward', dim=(-2, -1))
-        high = torch.abs(high)
+        high = high.real ＃torch.abs(high)
 
         fft_low = fft * mask
         low = self.unshift(fft_low)
         low = torch.fft.ifft2(low, norm='forward', dim=(-2, -1))
-        low = torch.abs(low)#理论上用.real取实部更好。这里容易让人误解是取振幅
+        low = low.real #torch.abs(low)#理论上用.real取实部更好。这里容易让人误解是取振幅
 
         return high, low #此处不是振幅图，而是实际图像的高低频部分。
         
